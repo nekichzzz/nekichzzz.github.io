@@ -6,92 +6,147 @@
   <title>Портфолио Никиты Карасёва</title>
   <style>
     body {
-      font-family: 'Segoe UI', Arial, sans-serif;
       margin: 0;
-      background: linear-gradient(120deg, #111827, #1e3a8a);
-      color: #f3f4f6;
-      line-height: 1.6;
+      font-family: 'Segoe UI', sans-serif;
+      background: radial-gradient(circle at top, #0f172a, #020617);
+      color: #e2e8f0;
+      overflow-x: hidden;
     }
+
+    /* Анимированный фон */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: radial-gradient(circle, rgba(56,189,248,0.15), transparent 70%),
+                  radial-gradient(circle at 70% 80%, rgba(99,102,241,0.15), transparent 60%);
+      animation: float 10s infinite alternate ease-in-out;
+      z-index: -1;
+    }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(-40px); }
+    }
+
     header {
       text-align: center;
       padding: 80px 20px;
-      background: linear-gradient(135deg, #2563eb, #38bdf8);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+      background: linear-gradient(135deg, #2563eb, #6366f1);
+      box-shadow: 0 0 40px rgba(37,99,235,0.4);
     }
     header h1 {
-      font-size: 42px;
       margin: 0;
+      font-size: 46px;
+      text-shadow: 0 0 15px rgba(255,255,255,0.3);
     }
     header p {
       font-size: 18px;
       opacity: 0.9;
     }
-    header a {
+    .btn {
       display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      background: white;
-      color: #2563eb;
-      border-radius: 8px;
-      text-decoration: none;
+      margin-top: 25px;
+      padding: 12px 28px;
       font-weight: bold;
+      background: #0f172a;
+      color: #93c5fd;
+      border-radius: 10px;
+      text-decoration: none;
+      box-shadow: 0 0 20px rgba(147,197,253,0.3);
       transition: 0.3s;
     }
-    header a:hover {
-      background: #dbeafe;
+    .btn:hover {
+      color: white;
+      background: #1d4ed8;
+      box-shadow: 0 0 30px rgba(147,197,253,0.5);
     }
+
     section {
       max-width: 900px;
-      margin: 40px auto;
-      padding: 30px;
+      margin: 60px auto;
+      padding: 40px;
       background: rgba(255,255,255,0.05);
       border-radius: 16px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 25px rgba(0,0,0,0.4);
+      backdrop-filter: blur(10px);
     }
     h2 {
       color: #60a5fa;
-      margin-top: 0;
+      text-shadow: 0 0 8px rgba(96,165,250,0.5);
     }
     ul {
       list-style: none;
       padding: 0;
     }
     li {
-      background: rgba(255,255,255,0.1);
-      margin: 6px 0;
-      padding: 10px;
+      margin: 8px 0;
+      padding: 10px 14px;
+      background: rgba(255,255,255,0.07);
       border-radius: 8px;
-    }
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .card {
-      background: rgba(255,255,255,0.08);
-      border-radius: 10px;
-      padding: 15px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
       transition: 0.3s;
     }
-    .card:hover {
-      transform: translateY(-4px);
+    li:hover {
       background: rgba(255,255,255,0.15);
+      transform: translateX(5px);
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 20px;
+    }
+    .card {
+      background: rgba(30,41,59,0.8);
+      border-radius: 14px;
+      padding: 20px;
+      box-shadow: 0 0 15px rgba(99,102,241,0.3);
+      transition: 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(99,102,241,0.2), rgba(56,189,248,0.2));
+      opacity: 0;
+      transition: 0.3s;
+    }
+    .card:hover::after {
+      opacity: 1;
+    }
+    .card:hover {
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 0 25px rgba(56,189,248,0.5);
     }
     .card h3 {
-      color: #93c5fd;
       margin-top: 0;
+      color: #93c5fd;
     }
     .card a {
-      color: #60a5fa;
+      color: #38bdf8;
       text-decoration: none;
     }
+    .card a:hover {
+      text-decoration: underline;
+    }
+
     footer {
       text-align: center;
       padding: 25px;
       color: #9ca3af;
       font-size: 14px;
       border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .contact a {
+      color: #93c5fd;
+      text-decoration: none;
+    }
+    .contact a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -100,21 +155,24 @@
   <header>
     <h1>Никита Карасёв</h1>
     <p>Студент ВШЭ СПб — Программирование и инжиниринг компьютерных игр</p>
-    <a href="#projects">Смотреть проекты</a>
+    <a href="#projects" class="btn">🚀 Смотреть проекты</a>
   </header>
 
   <section id="about">
     <h2>О себе</h2>
-    <p>Привет! 👋 Я Никита — студент НИУ ВШЭ в Санкт-Петербурге. Занимаюсь разработкой игр и интересуюсь всем, что связано с геймдевом. Люблю разбираться в системах, писать чистый код и экспериментировать с движками.</p>
+    <p>Привет! 👋 Меня зовут Никита. Я изучаю геймдев и программирование в НИУ ВШЭ Санкт-Петербург.  
+    Люблю создавать интерактивные проекты, игры и визуальные эффекты.  
+    Моя цель — стать разработчиком игр с упором на логику, геймдизайн и атмосферу.</p>
   </section>
 
   <section id="skills">
     <h2>Навыки</h2>
     <ul>
-      <li>Unity / C#</li>
-      <li>Python, JavaScript, HTML, CSS</li>
-      <li>Git, GitHub, командная работа</li>
-      <li>Blender, Figma, UI-дизайн</li>
+      <li>🎮 Unity / C# — разработка игр, скрипты, физика, UI</li>
+      <li>💻 HTML / CSS / JavaScript — создание сайтов и интерфейсов</li>
+      <li>🐍 Python — алгоритмы, автоматизация</li>
+      <li>🧠 Git / GitHub — командная работа и контроль версий</li>
+      <li>🎨 Blender, Figma — 3D и дизайн интерфейсов</li>
     </ul>
   </section>
 
@@ -122,31 +180,33 @@
     <h2>Проекты</h2>
     <div class="projects">
       <div class="card">
-        <h3>🎮 Платформер на Unity</h3>
-        <p>2D-игра с физикой, уровнями и коллекциями предметов. Полностью мой код и дизайн.</p>
+        <h3>🎮 Unity Platformer</h3>
+        <p>2D-игра с физикой, уровнями и системой достижений.  
+        Проект написан полностью на C#.</p>
         <a href="#">Ссылка на GitHub</a>
       </div>
       <div class="card">
-        <h3>🧩 Головоломка «MindShift»</h3>
-        <p>Игровой прототип с уникальной механикой смены состояний. Используется паттерн State.</p>
+        <h3>🧩 MindShift</h3>
+        <p>Игровой прототип головоломки, где игрок меняет законы мира.  
+        Используется паттерн State и ScriptableObjects.</p>
         <a href="#">Демо (скоро)</a>
       </div>
       <div class="card">
-        <h3>🌐 Этот сайт</h3>
-        <p>Портфолио, сделанное вручную только на HTML с встроенными стилями. Без фреймворков!</p>
+        <h3>🌐 Веб-портфолио</h3>
+        <p>Этот сайт — сделан полностью на HTML с неоновым оформлением без внешнего CSS-файла.</p>
         <a href="https://nikitakarassyov.github.io/">Открыть</a>
       </div>
     </div>
   </section>
 
-  <section id="contact">
+  <section id="contact" class="contact">
     <h2>Контакты</h2>
-    <p>📧 <a href="mailto:nikita@example.com" style="color:#93c5fd;">nikita@example.com</a></p>
-    <p>💼 <a href="https://github.com/nikitakarassyov" style="color:#93c5fd;">github.com/nikitakarassyov</a></p>
+    <p>📧 <a href="mailto:nikita@example.com">nikita@example.com</a></p>
+    <p>💼 <a href="https://github.com/nikitakarassyov">github.com/nikitakarassyov</a></p>
   </section>
 
   <footer>
-    © 2025 Никита Карасёв — Все права защищены
+    © 2025 Никита Карасёв — создано с любовью к коду 💙
   </footer>
 
 </body>
