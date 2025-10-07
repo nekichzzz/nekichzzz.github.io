@@ -3,24 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мое Портфолио - [Ваше Имя]</title>
+    <title>Творческое Портфолио - Никита Карасёв</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header class="hero">
         <div class="container">
             <div class="hero-content">
-                <img src="your_profile_picture.jpg" alt="Ваша фотография" class="profile-picture">
-                <h1>Привет, я [Ваше Имя]!</h1>
-                <p class="tagline">Я [Ваша Профессия/Роль], и вот что я делаю.</p>
+                <img src="your_creative_profile_picture.jpg" alt="Ваша креативная фотография" class="profile-picture">
+                <h1>Привет, я <span>Никита Карасёв</span>!</h1>
+                <p class="tagline">Превращаю идеи в интерактивный опыт. Я <span>[Ваша Профессия/Роль]</span>.</p>
                 <div class="social-links">
                     <a href="https://github.com/ваш_логин" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
                     <a href="https://linkedin.com/in/ваш_логин" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     <a href="mailto:ваша_почта@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://instagram.com/ваш_логин" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
-                <a href="#contact" class="btn">Связаться со мной</a>
+                <a href="#contact" class="btn primary-btn">Связаться со мной</a>
             </div>
         </div>
     </header>
@@ -28,78 +29,81 @@
     <main>
         <section id="about" class="section about-me">
             <div class="container">
-                <h2>Обо мне</h2>
-                <p>
-                    Здесь вы можете написать несколько абзацев о себе. Расскажите о своих увлечениях,
-                    карьерных целях, философии работы и о том, что вас вдохновляет.
-                    Например: "Я страстный разработчик, который любит создавать элегантные и эффективные решения.
-                    Мой опыт охватывает [область 1], [область 2] и [область 3]. Я всегда стремлюсь к обучению
-                    и освоению новых технологий."
-                </p>
-                <p>
-                    Можно добавить еще один абзац с более личной информацией или деталями,
-                    которые демонстрируют вашу уникальность.
-                </p>
+                <h2><span>Кто</span> я</h2>
+                <div class="about-content">
+                    <p>
+                        Я <strong>Никита Карасёв</strong>, [Ваша Профессия/Роль] с <strong>[число] годами опыта</strong> в создании [тип продуктов/решений].
+                        Моя страсть заключается в [опишите вашу страсть, например, "превращении сложных идей в интуитивно понятные пользовательские интерфейсы"].
+                        Я верю в [ваша философия, например, "силу чистого кода и внимательного дизайна"].
+                    </p>
+                    <p>
+                        За годы работы я имел честь работать над [тип проектов, например, "масштабными веб-приложениями, мобильными платформами и интерактивными лендингами"].
+                        Мне нравится решать сложные задачи и всегда стремиться к инновациям. В свободное время я [ваше хобби/увлечение, например, "экспериментирую с новыми фреймворками и изучаю тренды в дизайне"].
+                    </p>
+                </div>
             </div>
         </section>
 
-        <section id="skills" class="section skills">
+        <section id="skills" class="section skills-section">
             <div class="container">
-                <h2>Мои Навыки</h2>
+                <h2><span>Мои</span> Навыки</h2>
                 <div class="skills-grid">
-                    <div class="skill-item">
-                        <i class="fab fa-html5"></i>
-                        <h3>HTML5</h3>
-                        <p>Семантическая разметка и доступность.</p>
+                    <div class="skill-card">
+                        <i class="fab fa-html5 skill-icon"></i>
+                        <h3>HTML5 & CSS3</h3>
+                        <p>Семантическая разметка, SASS, LESS, Bootstrap, TailwindCSS, адаптивный дизайн.</p>
                     </div>
-                    <div class="skill-item">
-                        <i class="fab fa-css3-alt"></i>
-                        <h3>CSS3</h3>
-                        <p>Адаптивный дизайн, Flexbox, Grid, анимации.</p>
+                    <div class="skill-card">
+                        <i class="fab fa-js skill-icon"></i>
+                        <h3>JavaScript (ES6+)</h3>
+                        <p>Vanilla JS, DOM Manipulation, AJAX, Async/Await.</p>
                     </div>
-                    <div class="skill-item">
-                        <i class="fab fa-js"></i>
-                        <h3>JavaScript</h3>
-                        <p>Интерактивные элементы, DOM-манипуляции, AJAX.</p>
+                    <div class="skill-card">
+                        <i class="fab fa-react skill-icon"></i>
+                        <h3>Frontend Frameworks</h3>
+                        <p>React.js, Vue.js, Angular (выберите ваш), Redux/Vuex.</p>
                     </div>
-                    <div class="skill-item">
-                        <i class="fab fa-react"></i>
-                        <h3>React</h3>
-                        <p>Разработка компонентов, управление состоянием.</p>
+                    <div class="skill-card">
+                        <i class="fas fa-server skill-icon"></i>
+                        <h3>Backend (Node.js/Python)</h3>
+                        <p>Express.js, Django/Flask, RESTful APIs, Databases (SQL/NoSQL).</p>
                     </div>
-                    <div class="skill-item">
-                        <i class="fab fa-python"></i>
-                        <h3>Python</h3>
-                        <p>Backend-разработка, скриптинг.</p>
+                    <div class="skill-card">
+                        <i class="fas fa-tools skill-icon"></i>
+                        <h3>Tools & Workflow</h3>
+                        <p>Git, Docker, Webpack, Figma, Adobe XD, CI/CD.</p>
                     </div>
-                    <div class="skill-item">
-                        <i class="fas fa-database"></i>
-                        <h3>SQL</h3>
-                        <p>Работа с базами данных, запросы.</p>
+                    <div class="skill-card">
+                        <i class="fas fa-palette skill-icon"></i>
+                        <h3>UI/UX Design</h3>
+                        <p>Прототипирование, Wireframing, Пользовательские исследования.</p>
                     </div>
                     <!-- Добавьте или измените навыки по своему усмотрению -->
                 </div>
             </div>
         </section>
 
-        <section id="experience" class="section experience">
+        <section id="experience" class="section experience-section">
             <div class="container">
-                <h2>Опыт Работы</h2>
+                <h2><span>Мой</span> Опыт</h2>
                 <div class="timeline">
                     <div class="timeline-item">
-                        <h3>[Должность] в [Название Компании]</h3>
-                        <span class="date">[Месяц Год] – [Месяц Год]</span>
+                        <div class="timeline-dot"></div>
+                        <h3>[Должность] <span class="company-name">@ [Название Компании]</span></h3>
+                        <span class="date">[Месяц Год] – [Месяц Год] / Настоящее время</span>
                         <ul>
-                            <li>Отвечал за [Конкретная задача 1] и достиг [Результат 1].</li>
-                            <li>Разработал [Проект 1], используя [Технологии], что привело к [Результат 2].</li>
-                            <li>Сотрудничал с командой над [Задача 3], улучшив [Метрика].</li>
+                            <li>Отвечал за [Ключевая обязанность 1] и добился [Измеримый результат 1].</li>
+                            <li>Разработал и внедрил [Технология/Решение 1], что привело к [Положительный эффект 1].</li>
+                            <li>Участвовал в [Командный проект], улучшив [Что было улучшено] на [Процент/Количество].</li>
                         </ul>
                     </div>
                     <div class="timeline-item">
-                        <h3>[Должность] в [Название Предыдущей Компании]</h3>
+                        <div class="timeline-dot"></div>
+                        <h3>[Должность] <span class="company-name">@ [Название Предыдущей Компании]</span></h3>
                         <span class="date">[Месяц Год] – [Месяц Год]</span>
                         <ul>
-                            <li>[Описание обязанностей и достижений]</li>
+                            <li>[Краткое описание обязанностей и достижений]</li>
+                            <li>[Пример проекта или результата]</li>
                         </ul>
                     </div>
                     <!-- Добавьте больше мест работы при необходимости -->
@@ -107,26 +111,32 @@
             </div>
         </section>
 
-        <section id="portfolio" class="section portfolio">
+        <section id="portfolio" class="section portfolio-section">
             <div class="container">
-                <h2>Мои Проекты</h2>
+                <h2><span>Мои</span> Проекты</h2>
                 <div class="portfolio-grid">
-                    <div class="portfolio-item">
-                        <img src="project1.jpg" alt="Проект 1">
-                        <h3><a href="https://ссылка_на_проект1.com" target="_blank">Название Проекта 1</a></h3>
-                        <p>Краткое описание проекта. Что это, какие технологии использовались, какую проблему решает.</p>
-                        <div class="project-links">
-                            <a href="https://ссылка_на_демо1.com" target="_blank" class="project-link">Демо <i class="fas fa-external-link-alt"></i></a>
-                            <a href="https://github.com/ваш_логин/репозиторий1" target="_blank" class="project-link">GitHub <i class="fab fa-github"></i></a>
+                    <div class="portfolio-card" data-project-id="1">
+                        <img src="project1_thumbnail.jpg" alt="Обложка Проекта 1">
+                        <div class="card-overlay">
+                            <h3>Название Проекта 1</h3>
+                            <p>Веб-приложение для [краткое описание].</p>
+                            <button class="view-project-btn btn secondary-btn">Подробнее</button>
                         </div>
                     </div>
-                    <div class="portfolio-item">
-                        <img src="project2.jpg" alt="Проект 2">
-                        <h3><a href="https://ссылка_на_проект2.com" target="_blank">Название Проекта 2</a></h3>
-                        <p>Еще одно краткое описание проекта.</p>
-                        <div class="project-links">
-                            <a href="https://ссылка_на_демо2.com" target="_blank" class="project-link">Демо <i class="fas fa-external-link-alt"></i></a>
-                            <a href="https://github.com/ваш_логин/репозиторий2" target="_blank" class="project-link">GitHub <i class="fab fa-github"></i></a>
+                    <div class="portfolio-card" data-project-id="2">
+                        <img src="project2_thumbnail.jpg" alt="Обложка Проекта 2">
+                        <div class="card-overlay">
+                            <h3>Название Проекта 2</h3>
+                            <p>Мобильное приложение для [краткое описание].</p>
+                            <button class="view-project-btn btn secondary-btn">Подробнее</button>
+                        </div>
+                    </div>
+                    <div class="portfolio-card" data-project-id="3">
+                        <img src="project3_thumbnail.jpg" alt="Обложка Проекта 3">
+                        <div class="card-overlay">
+                            <h3>Название Проекта 3</h3>
+                            <p>Дизайн-система для [краткое описание].</p>
+                            <button class="view-project-btn btn secondary-btn">Подробнее</button>
                         </div>
                     </div>
                     <!-- Добавьте больше проектов -->
@@ -134,26 +144,46 @@
             </div>
         </section>
 
-        <section id="contact" class="section contact">
+        <section id="contact" class="section contact-section">
             <div class="container">
-                <h2>Связаться со мной</h2>
-                <p>Я всегда открыт для новых возможностей и интересных проектов. Свяжитесь со мной!</p>
+                <h2><span>Напишите</span> мне</h2>
+                <p class="contact-intro">Я всегда открыт для новых идей, сотрудничества или просто для дружеской беседы. Не стесняйтесь связаться!</p>
                 <form action="https://formspree.io/f/ваше_id_formspree" method="POST" class="contact-form">
-                    <input type="text" name="name" placeholder="Ваше Имя" required>
-                    <input type="email" name="email" placeholder="Ваш Email" required>
-                    <textarea name="message" placeholder="Ваше Сообщение" rows="5" required></textarea>
-                    <button type="submit" class="btn">Отправить сообщение</button>
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Ваше Имя" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Ваш Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Ваше Сообщение" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary-btn submit-btn">Отправить</button>
                 </form>
-                <p class="email-direct">Или напишите мне напрямую: <a href="mailto:ваша_почта@example.com">ваша_почта@example.com</a></p>
+                <p class="email-direct">Предпочитаете напрямую? <a href="mailto:ваша_почта@example.com">ваша_почта@example.com</a></p>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2023 [Ваше Имя]. Все права защищены.</p>
+            <p>&copy; 2023 Никита Карасёв. Создано с <i class="fas fa-heart animated-heart"></i> и кодом.</p>
         </div>
     </footer>
+
+    <!-- Модальное окно для деталей проекта -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3 id="modal-project-title"></h3>
+            <img id="modal-project-image" src="" alt="Изображение проекта">
+            <p id="modal-project-description"></p>
+            <div class="modal-project-links">
+                <a id="modal-project-demo" href="#" target="_blank" class="btn secondary-btn">Демо <i class="fas fa-external-link-alt"></i></a>
+                <a id="modal-project-github" href="#" target="_blank" class="btn secondary-btn">GitHub <i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
