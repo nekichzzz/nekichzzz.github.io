@@ -1,190 +1,153 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Творческое Портфолио - Никита Карасёв</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Портфолио Никиты Карасёва</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      background: linear-gradient(120deg, #111827, #1e3a8a);
+      color: #f3f4f6;
+      line-height: 1.6;
+    }
+    header {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #2563eb, #38bdf8);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    }
+    header h1 {
+      font-size: 42px;
+      margin: 0;
+    }
+    header p {
+      font-size: 18px;
+      opacity: 0.9;
+    }
+    header a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background: white;
+      color: #2563eb;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    header a:hover {
+      background: #dbeafe;
+    }
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 30px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    }
+    h2 {
+      color: #60a5fa;
+      margin-top: 0;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      background: rgba(255,255,255,0.1);
+      margin: 6px 0;
+      padding: 10px;
+      border-radius: 8px;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: rgba(255,255,255,0.08);
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      background: rgba(255,255,255,0.15);
+    }
+    .card h3 {
+      color: #93c5fd;
+      margin-top: 0;
+    }
+    .card a {
+      color: #60a5fa;
+      text-decoration: none;
+    }
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #9ca3af;
+      font-size: 14px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+  </style>
 </head>
 <body>
-    <header class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <img src="your_creative_profile_picture.jpg" alt="Ваша креативная фотография" class="profile-picture">
-                <h1>Привет, я <span>Никита Карасёв</span>!</h1>
-                <p class="tagline">Превращаю идеи в интерактивный опыт. Я <span>[Ваша Профессия/Роль]</span>.</p>
-                <div class="social-links">
-                    <a href="https://github.com/ваш_логин" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com/in/ваш_логин" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="mailto:ваша_почта@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                    <a href="https://instagram.com/ваш_логин" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                </div>
-                <a href="#contact" class="btn primary-btn">Связаться со мной</a>
-            </div>
-        </div>
-    </header>
 
-    <main>
-        <section id="about" class="section about-me">
-            <div class="container">
-                <h2><span>Кто</span> я</h2>
-                <div class="about-content">
-                    <p>
-                        Я <strong>Никита Карасёв</strong>, [Ваша Профессия/Роль] с <strong>[число] годами опыта</strong> в создании [тип продуктов/решений].
-                        Моя страсть заключается в [опишите вашу страсть, например, "превращении сложных идей в интуитивно понятные пользовательские интерфейсы"].
-                        Я верю в [ваша философия, например, "силу чистого кода и внимательного дизайна"].
-                    </p>
-                    <p>
-                        За годы работы я имел честь работать над [тип проектов, например, "масштабными веб-приложениями, мобильными платформами и интерактивными лендингами"].
-                        Мне нравится решать сложные задачи и всегда стремиться к инновациям. В свободное время я [ваше хобби/увлечение, например, "экспериментирую с новыми фреймворками и изучаю тренды в дизайне"].
-                    </p>
-                </div>
-            </div>
-        </section>
+  <header>
+    <h1>Никита Карасёв</h1>
+    <p>Студент ВШЭ СПб — Программирование и инжиниринг компьютерных игр</p>
+    <a href="#projects">Смотреть проекты</a>
+  </header>
 
-        <section id="skills" class="section skills-section">
-            <div class="container">
-                <h2><span>Мои</span> Навыки</h2>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <i class="fab fa-html5 skill-icon"></i>
-                        <h3>HTML5 & CSS3</h3>
-                        <p>Семантическая разметка, SASS, LESS, Bootstrap, TailwindCSS, адаптивный дизайн.</p>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fab fa-js skill-icon"></i>
-                        <h3>JavaScript (ES6+)</h3>
-                        <p>Vanilla JS, DOM Manipulation, AJAX, Async/Await.</p>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fab fa-react skill-icon"></i>
-                        <h3>Frontend Frameworks</h3>
-                        <p>React.js, Vue.js, Angular (выберите ваш), Redux/Vuex.</p>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fas fa-server skill-icon"></i>
-                        <h3>Backend (Node.js/Python)</h3>
-                        <p>Express.js, Django/Flask, RESTful APIs, Databases (SQL/NoSQL).</p>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fas fa-tools skill-icon"></i>
-                        <h3>Tools & Workflow</h3>
-                        <p>Git, Docker, Webpack, Figma, Adobe XD, CI/CD.</p>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fas fa-palette skill-icon"></i>
-                        <h3>UI/UX Design</h3>
-                        <p>Прототипирование, Wireframing, Пользовательские исследования.</p>
-                    </div>
-                    <!-- Добавьте или измените навыки по своему усмотрению -->
-                </div>
-            </div>
-        </section>
+  <section id="about">
+    <h2>О себе</h2>
+    <p>Привет! 👋 Я Никита — студент НИУ ВШЭ в Санкт-Петербурге. Занимаюсь разработкой игр и интересуюсь всем, что связано с геймдевом. Люблю разбираться в системах, писать чистый код и экспериментировать с движками.</p>
+  </section>
 
-        <section id="experience" class="section experience-section">
-            <div class="container">
-                <h2><span>Мой</span> Опыт</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <h3>[Должность] <span class="company-name">@ [Название Компании]</span></h3>
-                        <span class="date">[Месяц Год] – [Месяц Год] / Настоящее время</span>
-                        <ul>
-                            <li>Отвечал за [Ключевая обязанность 1] и добился [Измеримый результат 1].</li>
-                            <li>Разработал и внедрил [Технология/Решение 1], что привело к [Положительный эффект 1].</li>
-                            <li>Участвовал в [Командный проект], улучшив [Что было улучшено] на [Процент/Количество].</li>
-                        </ul>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <h3>[Должность] <span class="company-name">@ [Название Предыдущей Компании]</span></h3>
-                        <span class="date">[Месяц Год] – [Месяц Год]</span>
-                        <ul>
-                            <li>[Краткое описание обязанностей и достижений]</li>
-                            <li>[Пример проекта или результата]</li>
-                        </ul>
-                    </div>
-                    <!-- Добавьте больше мест работы при необходимости -->
-                </div>
-            </div>
-        </section>
+  <section id="skills">
+    <h2>Навыки</h2>
+    <ul>
+      <li>Unity / C#</li>
+      <li>Python, JavaScript, HTML, CSS</li>
+      <li>Git, GitHub, командная работа</li>
+      <li>Blender, Figma, UI-дизайн</li>
+    </ul>
+  </section>
 
-        <section id="portfolio" class="section portfolio-section">
-            <div class="container">
-                <h2><span>Мои</span> Проекты</h2>
-                <div class="portfolio-grid">
-                    <div class="portfolio-card" data-project-id="1">
-                        <img src="project1_thumbnail.jpg" alt="Обложка Проекта 1">
-                        <div class="card-overlay">
-                            <h3>Название Проекта 1</h3>
-                            <p>Веб-приложение для [краткое описание].</p>
-                            <button class="view-project-btn btn secondary-btn">Подробнее</button>
-                        </div>
-                    </div>
-                    <div class="portfolio-card" data-project-id="2">
-                        <img src="project2_thumbnail.jpg" alt="Обложка Проекта 2">
-                        <div class="card-overlay">
-                            <h3>Название Проекта 2</h3>
-                            <p>Мобильное приложение для [краткое описание].</p>
-                            <button class="view-project-btn btn secondary-btn">Подробнее</button>
-                        </div>
-                    </div>
-                    <div class="portfolio-card" data-project-id="3">
-                        <img src="project3_thumbnail.jpg" alt="Обложка Проекта 3">
-                        <div class="card-overlay">
-                            <h3>Название Проекта 3</h3>
-                            <p>Дизайн-система для [краткое описание].</p>
-                            <button class="view-project-btn btn secondary-btn">Подробнее</button>
-                        </div>
-                    </div>
-                    <!-- Добавьте больше проектов -->
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="section contact-section">
-            <div class="container">
-                <h2><span>Напишите</span> мне</h2>
-                <p class="contact-intro">Я всегда открыт для новых идей, сотрудничества или просто для дружеской беседы. Не стесняйтесь связаться!</p>
-                <form action="https://formspree.io/f/ваше_id_formspree" method="POST" class="contact-form">
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="Ваше Имя" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="Ваш Email" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" placeholder="Ваше Сообщение" rows="6" required></textarea>
-                    </div>
-                    <button type="submit" class="btn primary-btn submit-btn">Отправить</button>
-                </form>
-                <p class="email-direct">Предпочитаете напрямую? <a href="mailto:ваша_почта@example.com">ваша_почта@example.com</a></p>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 Никита Карасёв. Создано с <i class="fas fa-heart animated-heart"></i> и кодом.</p>
-        </div>
-    </footer>
-
-    <!-- Модальное окно для деталей проекта -->
-    <div id="project-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <h3 id="modal-project-title"></h3>
-            <img id="modal-project-image" src="" alt="Изображение проекта">
-            <p id="modal-project-description"></p>
-            <div class="modal-project-links">
-                <a id="modal-project-demo" href="#" target="_blank" class="btn secondary-btn">Демо <i class="fas fa-external-link-alt"></i></a>
-                <a id="modal-project-github" href="#" target="_blank" class="btn secondary-btn">GitHub <i class="fab fa-github"></i></a>
-            </div>
-        </div>
+  <section id="projects">
+    <h2>Проекты</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>🎮 Платформер на Unity</h3>
+        <p>2D-игра с физикой, уровнями и коллекциями предметов. Полностью мой код и дизайн.</p>
+        <a href="#">Ссылка на GitHub</a>
+      </div>
+      <div class="card">
+        <h3>🧩 Головоломка «MindShift»</h3>
+        <p>Игровой прототип с уникальной механикой смены состояний. Используется паттерн State.</p>
+        <a href="#">Демо (скоро)</a>
+      </div>
+      <div class="card">
+        <h3>🌐 Этот сайт</h3>
+        <p>Портфолио, сделанное вручную только на HTML с встроенными стилями. Без фреймворков!</p>
+        <a href="https://nikitakarassyov.github.io/">Открыть</a>
+      </div>
     </div>
+  </section>
 
-    <script src="script.js"></script>
+  <section id="contact">
+    <h2>Контакты</h2>
+    <p>📧 <a href="mailto:nikita@example.com" style="color:#93c5fd;">nikita@example.com</a></p>
+    <p>💼 <a href="https://github.com/nikitakarassyov" style="color:#93c5fd;">github.com/nikitakarassyov</a></p>
+  </section>
+
+  <footer>
+    © 2025 Никита Карасёв — Все права защищены
+  </footer>
+
 </body>
 </html>
