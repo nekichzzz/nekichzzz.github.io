@@ -23,33 +23,33 @@ body::before {
   background: radial-gradient(circle at 25% 25%, rgba(99,102,241,0.2), transparent 60%),
               radial-gradient(circle at 75% 75%, rgba(56,189,248,0.2), transparent 60%);
   z-index: -1;
-  animation: float 20s infinite alternate ease-in-out;
+  animation: float 25s infinite alternate ease-in-out;
 }
 @keyframes float {
   0% { transform: translateY(0px); }
-  100% { transform: translateY(-50px); }
+  100% { transform: translateY(-60px); }
 }
 
 /* Шапка */
 header {
   text-align: center;
-  padding: 100px 20px;
+  padding: 120px 20px;
   background: linear-gradient(135deg, #1e3a8a, #0f172a);
-  box-shadow: 0 0 60px rgba(37,99,235,0.4);
+  box-shadow: 0 0 70px rgba(37,99,235,0.4);
   clip-path: ellipse(100% 80% at 50% 0%);
 }
 header h1 {
-  font-size: 56px;
+  font-size: 60px;
   margin: 0;
-  text-shadow: 0 0 20px rgba(255,255,255,0.3);
+  text-shadow: 0 0 25px rgba(255,255,255,0.3);
 }
 header p {
-  font-size: 20px;
+  font-size: 22px;
   margin: 15px 0 25px 0;
   opacity: 0.9;
 }
 header .btn {
-  padding: 15px 30px;
+  padding: 18px 35px;
   font-size: 18px;
   font-weight: bold;
   background: #0f172a;
@@ -57,26 +57,26 @@ header .btn {
   border-radius: 15px;
   border: none;
   cursor: pointer;
-  box-shadow: 0 0 35px rgba(147,197,253,0.5);
+  box-shadow: 0 0 40px rgba(147,197,253,0.5);
   transition: 0.3s;
 }
 header .btn:hover {
   background: #1d4ed8;
   color: white;
-  box-shadow: 0 0 50px rgba(147,197,253,0.7);
+  box-shadow: 0 0 60px rgba(147,197,253,0.7);
 }
 
 /* Секции */
 section {
   max-width: 1000px;
-  margin: 60px auto;
+  margin: 70px auto;
   padding: 50px;
   background: rgba(255,255,255,0.05);
   border-radius: 25px;
-  box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+  box-shadow: 0 8px 50px rgba(0,0,0,0.5);
   backdrop-filter: blur(12px);
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(50px);
   transition: all 1s ease;
 }
 section.visible {
@@ -86,31 +86,38 @@ section.visible {
 h2 {
   color: #60a5fa;
   margin-top: 0;
-  text-shadow: 0 0 10px rgba(96,165,250,0.5);
+  text-shadow: 0 0 12px rgba(96,165,250,0.5);
 }
 
 /* Навыки */
-ul {
-  list-style: none;
-  padding: 0;
-}
-li {
-  margin: 10px 0;
-  padding: 14px 18px;
-  background: rgba(255,255,255,0.07);
+.skill-bar {
+  background: rgba(255,255,255,0.1);
   border-radius: 12px;
-  transition: 0.3s;
+  margin: 12px 0;
+  overflow: hidden;
+  height: 25px;
 }
-li:hover {
-  background: rgba(255,255,255,0.18);
-  transform: translateX(7px);
+.skill-bar div {
+  height: 100%;
+  text-align: right;
+  padding-right: 10px;
+  line-height: 25px;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 12px;
+  transition: width 1.5s ease-in-out;
 }
+.skill-html { background: #f97316; width: 90%; }
+.skill-css { background: #3b82f6; width: 85%; }
+.skill-js { background: #facc15; width: 80%; color:#000; }
+.skill-unity { background: #10b981; width: 75%; }
+.skill-python { background: #6366f1; width: 70%; }
 
 /* Проекты */
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  gap: 35px;
   margin-top: 25px;
 }
 .card {
@@ -120,7 +127,7 @@ li:hover {
   transition: 0.3s;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 0 20px rgba(56,189,248,0.3);
+  box-shadow: 0 0 25px rgba(56,189,248,0.3);
 }
 .card::before {
   content: '';
@@ -137,8 +144,8 @@ li:hover {
   opacity: 0.3;
 }
 .card:hover {
-  transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 0 35px rgba(56,189,248,0.6);
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0 0 40px rgba(56,189,248,0.6);
 }
 .card h3 {
   color: #93c5fd;
@@ -152,6 +159,22 @@ li:hover {
   text-decoration: underline;
 }
 
+/* Опыт / обучение */
+.experience {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.experience .exp-card {
+  background: rgba(56,189,248,0.05);
+  padding: 20px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+.experience .exp-card:hover {
+  background: rgba(56,189,248,0.15);
+}
+
 /* Контакты */
 .contact a {
   color: #93c5fd;
@@ -160,13 +183,13 @@ li:hover {
 }
 .contact a:hover {
   text-decoration: underline;
-  text-shadow: 0 0 10px #38bdf8;
+  text-shadow: 0 0 12px #38bdf8;
 }
 
 /* Подвал */
 footer {
   text-align: center;
-  padding: 40px;
+  padding: 50px;
   color: #9ca3af;
   border-top: 1px solid rgba(255,255,255,0.1);
   font-size: 16px;
@@ -183,18 +206,21 @@ footer {
 
 <section id="about">
   <h2>О себе</h2>
-  <p>Привет! 👋 Я Никита, студент НИУ ВШЭ СПб. Создаю игры на Unity, пишу чистый код и разрабатываю интерактивные проекты. Люблю экспериментировать с механикой и визуальными эффектами.</p>
+  <p>Привет! 👋 Я Никита. Создаю игры на Unity, пишу чистый код, разрабатываю интерактивные проекты. Люблю экспериментировать с механикой, визуальными эффектами и новыми технологиями. Цель: стать ведущим разработчиком игр с уникальной атмосферой и интересными геймплейными решениями.</p>
 </section>
 
 <section id="skills">
   <h2>Навыки</h2>
-  <ul>
-    <li>🎮 Unity / C# — разработка игр, физика, UI</li>
-    <li>💻 HTML / CSS / JS — веб-разработка</li>
-    <li>🐍 Python — алгоритмы и автоматизация</li>
-    <li>🧠 Git / GitHub — контроль версий и командная работа</li>
-    <li>🎨 Blender / Figma — 3D и UI/UX дизайн</li>
-  </ul>
+  <div>HTML</div>
+  <div class="skill-bar"><div class="skill-html">90%</div></div>
+  <div>CSS</div>
+  <div class="skill-bar"><div class="skill-css">85%</div></div>
+  <div>JavaScript</div>
+  <div class="skill-bar"><div class="skill-js">80%</div></div>
+  <div>Unity / C#</div>
+  <div class="skill-bar"><div class="skill-unity">75%</div></div>
+  <div>Python</div>
+  <div class="skill-bar"><div class="skill-python">70%</div></div>
 </section>
 
 <section id="projects">
@@ -202,18 +228,44 @@ footer {
   <div class="projects">
     <div class="card">
       <h3>🎮 2D Платформер</h3>
-      <p>Мини-игра с уровнями, физикой и системой достижений. Полностью мой код и дизайн.</p>
+      <p>Игра с уровнями, физикой и достижениями. Полностью мой код и дизайн.</p>
       <a href="https://github.com/nekichzzz">GitHub</a>
     </div>
     <div class="card">
       <h3>🧩 MindShift</h3>
-      <p>Головоломка с уникальной механикой изменения законов мира и интересными уровнями.</p>
+      <p>Головоломка с уникальной механикой изменения законов мира и уровнями с возрастающей сложностью.</p>
       <a href="https://github.com/nekichzzz">GitHub</a>
     </div>
     <div class="card">
       <h3>🌐 Веб-портфолио</h3>
-      <p>Этот сайт создан вручную на HTML, CSS и JS. Красиво и динамично!</p>
+      <p>Этот сайт создан вручную на HTML, CSS и JS. Красиво, динамично и интерактивно.</p>
       <a href="https://github.com/nekichzzz">GitHub</a>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Опыт и обучение</h2>
+  <div class="experience">
+    <div class="exp-card">
+      <h3>НИУ ВШЭ СПб</h3>
+      <p>Специальность: Программирование и инжиниринг компьютерных игр</p>
+      <p>Изучение Unity, C#, алгоритмов, командная разработка проектов</p>
+    </div>
+    <div class="exp-card">
+      <h3>Онлайн-курсы</h3>
+      <p>Курс “Геймдев на Unity”</p>
+      <p>Курс “Веб-разработка: HTML, CSS, JS”</p>
+      <p>Курс “Python для автоматизации”</p>
+    </div>
+    <div class="exp-card">
+      <h3>Соревнования</h3>
+      <p>Участие в хакатонах по геймдеву</p>
+      <p>Конкурсы по созданию мини-игр</p>
+    </div>
+    <div class="exp-card">
+      <h3>Стажировки</h3>
+      <p>Мини-проекты с командой разработчиков игр</p>
     </div>
   </div>
 </section>
@@ -221,6 +273,7 @@ footer {
 <section id="contact" class="contact">
   <h2>Контакты</h2>
   <p>💼 <a href="https://github.com/nekichzzz">GitHub</a></p>
+  <p>🔗 <a href="#">LinkedIn</a></p>
 </section>
 
 <footer>
