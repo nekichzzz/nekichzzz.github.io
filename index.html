@@ -1,55 +1,160 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Портфолио Никиты Карасёва</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мое Портфолио - [Ваше Имя]</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <header>
-    <h1>Никита Карасёв</h1>
-    <p>Студент ВШЭ СПб — Программирование и инжиниринг компьютерных игр</p>
-  </header>
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <img src="your_profile_picture.jpg" alt="Ваша фотография" class="profile-picture">
+                <h1>Привет, я [Ваше Имя]!</h1>
+                <p class="tagline">Я [Ваша Профессия/Роль], и вот что я делаю.</p>
+                <div class="social-links">
+                    <a href="https://github.com/ваш_логин" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/ваш_логин" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:ваша_почта@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+                <a href="#contact" class="btn">Связаться со мной</a>
+            </div>
+        </div>
+    </header>
 
-  <section id="about">
-    <h2>О себе</h2>
-    <p>Привет! Я учусь на направлении «Программирование и инжиниринг компьютерных игр» в НИУ ВШЭ Санкт-Петербург. 
-       Интересуюсь разработкой игр, Unity, C#, сетевыми проектами и оптимизацией кода.</p>
-  </section>
+    <main>
+        <section id="about" class="section about-me">
+            <div class="container">
+                <h2>Обо мне</h2>
+                <p>
+                    Здесь вы можете написать несколько абзацев о себе. Расскажите о своих увлечениях,
+                    карьерных целях, философии работы и о том, что вас вдохновляет.
+                    Например: "Я страстный разработчик, который любит создавать элегантные и эффективные решения.
+                    Мой опыт охватывает [область 1], [область 2] и [область 3]. Я всегда стремлюсь к обучению
+                    и освоению новых технологий."
+                </p>
+                <p>
+                    Можно добавить еще один абзац с более личной информацией или деталями,
+                    которые демонстрируют вашу уникальность.
+                </p>
+            </div>
+        </section>
 
-  <section id="skills">
-    <h2>Навыки</h2>
-    <ul>
-      <li>Unity / C#</li>
-      <li>Python, JavaScript, HTML, CSS</li>
-      <li>Git и GitHub</li>
-      <li>Blender, Figma</li>
-    </ul>
-  </section>
+        <section id="skills" class="section skills">
+            <div class="container">
+                <h2>Мои Навыки</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <i class="fab fa-html5"></i>
+                        <h3>HTML5</h3>
+                        <p>Семантическая разметка и доступность.</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-css3-alt"></i>
+                        <h3>CSS3</h3>
+                        <p>Адаптивный дизайн, Flexbox, Grid, анимации.</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-js"></i>
+                        <h3>JavaScript</h3>
+                        <p>Интерактивные элементы, DOM-манипуляции, AJAX.</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-react"></i>
+                        <h3>React</h3>
+                        <p>Разработка компонентов, управление состоянием.</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-python"></i>
+                        <h3>Python</h3>
+                        <p>Backend-разработка, скриптинг.</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-database"></i>
+                        <h3>SQL</h3>
+                        <p>Работа с базами данных, запросы.</p>
+                    </div>
+                    <!-- Добавьте или измените навыки по своему усмотрению -->
+                </div>
+            </div>
+        </section>
 
-  <section id="projects">
-    <h2>Проекты</h2>
-    <div class="project">
-      <h3>🎮 Мини-игра на Unity</h3>
-      <p>2D платформер с физикой и уровнями. Код полностью мой.</p>
-      <a href="#">Ссылка на GitHub (позже)</a>
-    </div>
-    <div class="project">
-      <h3>🌐 Веб-портфолио</h3>
-      <p>Сайт обо мне, сделанный вручную на HTML и CSS.</p>
-      <a href="https://nikitakarassyov.github.io/">Смотреть сайт</a>
-    </div>
-  </section>
+        <section id="experience" class="section experience">
+            <div class="container">
+                <h2>Опыт Работы</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>[Должность] в [Название Компании]</h3>
+                        <span class="date">[Месяц Год] – [Месяц Год]</span>
+                        <ul>
+                            <li>Отвечал за [Конкретная задача 1] и достиг [Результат 1].</li>
+                            <li>Разработал [Проект 1], используя [Технологии], что привело к [Результат 2].</li>
+                            <li>Сотрудничал с командой над [Задача 3], улучшив [Метрика].</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>[Должность] в [Название Предыдущей Компании]</h3>
+                        <span class="date">[Месяц Год] – [Месяц Год]</span>
+                        <ul>
+                            <li>[Описание обязанностей и достижений]</li>
+                        </ul>
+                    </div>
+                    <!-- Добавьте больше мест работы при необходимости -->
+                </div>
+            </div>
+        </section>
 
-  <section id="contact">
-    <h2>Контакты</h2>
-    <p>📧 <a href="mailto:nikita@example.com">nikita@example.com</a></p>
-    <p>💼 <a href="https://github.com/nikitakarassyov">GitHub</a></p>
-  </section>
+        <section id="portfolio" class="section portfolio">
+            <div class="container">
+                <h2>Мои Проекты</h2>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <img src="project1.jpg" alt="Проект 1">
+                        <h3><a href="https://ссылка_на_проект1.com" target="_blank">Название Проекта 1</a></h3>
+                        <p>Краткое описание проекта. Что это, какие технологии использовались, какую проблему решает.</p>
+                        <div class="project-links">
+                            <a href="https://ссылка_на_демо1.com" target="_blank" class="project-link">Демо <i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://github.com/ваш_логин/репозиторий1" target="_blank" class="project-link">GitHub <i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="project2.jpg" alt="Проект 2">
+                        <h3><a href="https://ссылка_на_проект2.com" target="_blank">Название Проекта 2</a></h3>
+                        <p>Еще одно краткое описание проекта.</p>
+                        <div class="project-links">
+                            <a href="https://ссылка_на_демо2.com" target="_blank" class="project-link">Демо <i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://github.com/ваш_логин/репозиторий2" target="_blank" class="project-link">GitHub <i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <!-- Добавьте больше проектов -->
+                </div>
+            </div>
+        </section>
 
-  <footer>
-    <p>© 2025 Никита Карасёв</p>
-  </footer>
+        <section id="contact" class="section contact">
+            <div class="container">
+                <h2>Связаться со мной</h2>
+                <p>Я всегда открыт для новых возможностей и интересных проектов. Свяжитесь со мной!</p>
+                <form action="https://formspree.io/f/ваше_id_formspree" method="POST" class="contact-form">
+                    <input type="text" name="name" placeholder="Ваше Имя" required>
+                    <input type="email" name="email" placeholder="Ваш Email" required>
+                    <textarea name="message" placeholder="Ваше Сообщение" rows="5" required></textarea>
+                    <button type="submit" class="btn">Отправить сообщение</button>
+                </form>
+                <p class="email-direct">Или напишите мне напрямую: <a href="mailto:ваша_почта@example.com">ваша_почта@example.com</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 [Ваше Имя]. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
